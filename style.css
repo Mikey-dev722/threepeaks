@@ -1,0 +1,517 @@
+```css
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f0e9;
+    color: #172019;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 28px 7%;
+
+    z-index: 10;
+
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 7%;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 15, 10, 0.9),
+            rgba(5, 15, 10, 0.35)
+        ),
+        linear-gradient(
+            180deg,
+            #203b2d,
+            #101b15
+        );
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 12vw, 170px);
+    line-height: 0.82;
+    letter-spacing: -7px;
+    margin-bottom: 35px;
+}
+
+.hero h1 span {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.hero-text {
+    max-width: 520px;
+    font-size: 20px;
+    margin-bottom: 35px;
+    opacity: 0.85;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: white;
+    color: #172019;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 120px 7%;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+}
+
+.section-heading > p:last-child {
+    color: #657067;
+}
+
+
+/* =========================
+   PEAK CARDS
+========================= */
+
+.peak-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.peak-card {
+    min-height: 430px;
+
+    padding: 35px;
+
+    background: white;
+
+    border: 1px solid #ddd9ce;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.25s;
+}
+
+.peak-card:hover {
+    transform: translateY(-8px);
+}
+
+.peak-card.featured {
+    background: #e2e7df;
+}
+
+.peak-card.highest {
+    background: #172019;
+    color: white;
+}
+
+.peak-number {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: auto;
+}
+
+.peak-card h3 {
+    font-size: 35px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.peak-status {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.peak-card > p:not(.peak-status) {
+    color: #69726c;
+}
+
+.highest > p:not(.peak-status) {
+    color: #b9c0ba;
+}
+
+.trig {
+    margin-top: 25px;
+
+    padding: 12px;
+
+    border: 1px solid #59655c;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   DARK SECTION
+========================= */
+
+.dark-section {
+    background: #172019;
+    color: white;
+}
+
+.dark-section .section-heading > p:last-child {
+    color: #9da79f;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.feature-list {
+    max-width: 900px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px 0;
+
+    border-top: 1px solid #39453d;
+}
+
+.feature:last-child {
+    border-bottom: 1px solid #39453d;
+}
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #59655c;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+.feature h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.feature p {
+    color: #9da79f;
+}
+
+
+/* =========================
+   ROUTE
+========================= */
+
+.route-section {
+    padding: 120px 7%;
+
+    background: #dce0d9;
+}
+
+.route-section h2 {
+    font-size: clamp(45px, 7vw, 90px);
+    line-height: 0.9;
+    margin-bottom: 70px;
+    letter-spacing: -4px;
+}
+
+.route {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.route-point {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.route-point strong {
+    font-size: 11px;
+    opacity: 0.5;
+}
+
+.route-point span {
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.line {
+    width: 45px;
+    height: 1px;
+    background: #7b857c;
+}
+
+.route-point.summit span {
+    font-size: 17px;
+}
+
+
+/* =========================
+   FRIENDS
+========================= */
+
+.friends-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.friend-card {
+    background: white;
+
+    border: 1px solid #ddd9ce;
+
+    padding: 30px;
+
+    transition: 0.2s;
+}
+
+.friend-card:hover {
+    transform: translateY(-5px);
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+
+    display: grid;
+    place-items: center;
+
+    background: #172019;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+.friend-card h3 {
+    font-size: 20px;
+}
+
+.friend-card p {
+    color: #727a74;
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 70px 7%;
+
+    background: #0d120e;
+    color: white;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #89918b;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 11px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 22px 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 100px 5%;
+    }
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+    .section,
+    .route-section {
+        padding: 80px 5%;
+    }
+
+    .peak-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .peak-card {
+        min-height: 350px;
+    }
+
+    .friends-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .route {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .line {
+        width: 1px;
+        height: 25px;
+        margin-left: 5px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .friends-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+}
+```
